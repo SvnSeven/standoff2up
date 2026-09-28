@@ -6,7 +6,7 @@
 <div id="open" class="openbox hidden"><div><div class="title" style="text-align:center">ОТКРЫТИЕ КЕЙСА</div><div class="reel" id="reel"></div><div class="line"></div><p id="st" style="text-align:center;color:#718091">Открываем...</p></div></div>
 <div id="mod" class="modal hidden"><div><div id="icon" style="font-size:44px">🎁</div><h2 id="mt">RESULT</h2><p id="mx"></p><button onclick="mod.classList.add('hidden')">CONTINUE</button></div></div>
 <script>
-const API=window.SO2_API||"http://127.0.0.1:8000";let S,from=null,to=null;
+const API=window.SO2_API||"";let S,from=null,to=null;
 const $=x=>document.getElementById(x);
 async function load(){S=await fetch(API+"/api/state?user_id=1").then(r=>r.json());render();await cases();}
 function c(s,sel,fn){return '<div class="card '+(sel?'sel':'')+'" onclick="'+fn+'"><img src="'+s.image+'"><div class="name">'+s.name+'</div><div class="price">◆ '+s.price+'</div><div class="rar">'+s.rarity+'</div></div>'}
