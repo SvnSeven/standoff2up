@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+backend/.venv/
+backend/*.db
+backend/catalog_cache.json
+.env
