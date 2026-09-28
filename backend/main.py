@@ -132,3 +132,7 @@ def open_case(x:CReq):
 
 @app.get("/health")
 def health():return {"ok":True}
+
+FRONTEND=BASE.parent/'frontend'
+if FRONTEND.exists():
+    app.mount('/',StaticFiles(directory=FRONTEND,html=True),name='frontend')
